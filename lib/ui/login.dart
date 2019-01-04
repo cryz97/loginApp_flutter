@@ -46,7 +46,7 @@ class LoginState extends State<Login> {
 
       body: new Container(
         alignment: Alignment.topCenter,
-        child: new Column(
+        child: new ListView(
           children: <Widget>[
 
             new Padding(padding: EdgeInsets.all(30)),
@@ -82,6 +82,7 @@ class LoginState extends State<Login> {
                       icon: new Icon(Icons.lock),
 
                     ),
+                    obscureText: true,
                   ),
                   
                   new Padding(padding: new EdgeInsets.all(20)),
