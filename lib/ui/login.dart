@@ -71,7 +71,10 @@ class LoginState extends State<Login> {
                   new Center(
                     child: new Row(
                       children: <Widget>[
+
+
                         new Container(
+                          margin: const EdgeInsets.only(left: 38),
                           child: new RaisedButton(
                               onPressed: () => debugPrint("Clicked"),
                               color: Colors.redAccent,
