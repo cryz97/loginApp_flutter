@@ -13,11 +13,22 @@ class LoginState extends State<Login> {
 
   final TextEditingController _userController = new TextEditingController();
   final TextEditingController _passwordController = new TextEditingController();
+  String _welcomeString = "";
 
   void _erase(){
     setState(() {
       _userController.clear();
       _passwordController.clear();
+    });
+  }
+
+  void _showWelcome(){
+    setState(() {
+      if(_userController.text.isNotEmpty && _userController.text.isNotEmpty){
+        _welcomeString = _userController.text;
+      }
+      else
+        _welcomeString = "Nothing!";
     });
   }
 
@@ -83,7 +94,7 @@ class LoginState extends State<Login> {
                         new Container(
                           margin: const EdgeInsets.only(left: 38),
                           child: new RaisedButton(
-                              onPressed: () => debugPrint("Clicked"),
+                              onPressed: _showWelcome,
                               color: Colors.redAccent,
                               child: new Text("Login",
                               style: new TextStyle(color: Colors.white,
@@ -113,7 +124,7 @@ class LoginState extends State<Login> {
             new Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                new Text("Welcome, Chris",
+                new Text("Welcome, $_welcomeString",
                 style: new TextStyle(color: Colors.deepPurple,
                 fontSize: 20,
                 fontWeight: FontWeight.w500),)
