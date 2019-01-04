@@ -83,6 +83,18 @@ class LoginState extends State<Login> {
                               fontSize: 17,
                               fontWeight: FontWeight.w300),),
                               ),
+                        ),
+
+                        new Container(
+                          margin: const EdgeInsets.only(left: 38),
+                          child: new RaisedButton(
+                            onPressed: () => debugPrint("Clicked"),
+                            color: Colors.redAccent,
+                            child: new Text("Clear",
+                              style: new TextStyle(color: Colors.white,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w300),),
+                          ),
                         )
                       ],
                     ),
