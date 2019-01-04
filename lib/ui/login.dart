@@ -14,6 +14,13 @@ class LoginState extends State<Login> {
   final TextEditingController _userController = new TextEditingController();
   final TextEditingController _passwordController = new TextEditingController();
 
+  void _erase(){
+    setState(() {
+      _userController.clear();
+      _passwordController.clear();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
 
@@ -88,7 +95,7 @@ class LoginState extends State<Login> {
                         new Container(
                           margin: const EdgeInsets.only(left: 120),
                           child: new RaisedButton(
-                            onPressed: () => debugPrint("Clicked"),
+                            onPressed: _erase,
                             color: Colors.redAccent,
                             child: new Text("Clear",
                               style: new TextStyle(color: Colors.white,
