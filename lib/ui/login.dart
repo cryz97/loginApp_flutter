@@ -86,7 +86,7 @@ class LoginState extends State<Login> {
                         ),
 
                         new Container(
-                          margin: const EdgeInsets.only(left: 38),
+                          margin: const EdgeInsets.only(left: 120),
                           child: new RaisedButton(
                             onPressed: () => debugPrint("Clicked"),
                             color: Colors.redAccent,
@@ -101,6 +101,16 @@ class LoginState extends State<Login> {
                   )
                 ],
               ),
+            ),
+            new Padding(padding: new EdgeInsets.all(20)),
+            new Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                new Text("Welcome, Chris",
+                style: new TextStyle(color: Colors.deepPurple,
+                fontSize: 20,
+                fontWeight: FontWeight.w500),)
+              ],
             )
           ],
         ),
